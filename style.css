@@ -1,0 +1,44 @@
+
+body {
+    margin: 0;
+}
+/* Apply to the whole page */
+body {
+    background-color: #000;           /* Black background */
+    color: #fff;                      /* Default text color white */
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Branding (your name) in top-left */
+.branding {
+    font-size: 1rem;                  /* Bigger font */
+    font-weight: 700;                /* Bolder */
+    color: white;                    /* White text */
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+}
+.main-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-pane, .right-pane {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Make sure Three.js canvas stays inside left pane */
+#three-container {
+    width: 100%;
+    height: 100%;
+}
+canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
